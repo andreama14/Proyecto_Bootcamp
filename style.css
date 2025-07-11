@@ -194,9 +194,9 @@ body {
 
 .about{
   font-family: 'Dosis', sans-serif;
-  margin: 90px 20px 40px 60px !important;
+  margin: 50px 20px 40px 60px !important;
   text-align: justify;
- 
+  font-size: 20px;
   
 }
 
@@ -223,6 +223,12 @@ body {
   background-color: #d9ecdd;
 }
 
+.titulo-seccion1{
+  font-family: 'Dosis', sans-serif;
+  font-weight: 800;
+  color: rgb(81, 157, 109);
+}
+
 .informacion1{
   width: 50% !important;
 }
@@ -231,6 +237,11 @@ body {
   font-family: 'Dosis', sans-serif;
   padding: 90px 20px !important;
   text-align: justify;
+  padding-right: 50px !important;
+  padding-left: 70px !important;
+  font-size: 18px;
+  margin-top: -10%;
+  margin-bottom: -28px !important;
 }
 
 .imagen1{
@@ -260,6 +271,9 @@ body {
   font-family: 'Dosis', sans-serif;
   padding: 90px 20px !important;
   text-align: justify;
+  padding-right: 50px !important;
+  padding-left: 70px !important;
+  font-size: 18px;
 }
 
 .imagen2{
@@ -304,7 +318,37 @@ body {
 .creditos a:hover {
   text-decoration: underline;
 }
+
+
 /* Juego Parejas */
+
+/* Juego Parejas */
+
+.titulo-juego{
+   font-family: 'Dosis', sans-serif;
+   color: rgb(81, 157, 109);
+   text-transform: uppercase;
+   margin-top: 111px;
+  font-size: 32px;
+  margin: 0;
+  font-family: 'Dosis', sans-serif;
+  color: #1b5e20;
+  margin-top: 0px !important;
+  
+}
+
+.parrafo-juego{
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-top: 20px;
+  font-size: 18px;
+  margin-top: 10px;
+  font-family: 'Dosis', sans-serif;
+  color: #444;
+}
+
+
+
 .tablero-juego {
   display: grid;
   grid-template-columns: repeat(4, 120px);
@@ -337,4 +381,219 @@ body {
 .carta.pareja-encontrada {
   background-color: #d4edda !important; /* verde suave */
   border: 2px solid #4caf50 !important; /* borde verde */
+}
+
+/* Posiciona el sol al ladito del texto */
+.sol-lottie {
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 320px); /* ajusta para que quede "al ladito derecho" */
+  transform: translateY(-50%);
+  width: 150px;
+  height: 150px;
+  z-index: 1;
+}
+
+
+
+/* ESTILOS BOTÓN DE JUEGO */
+
+  .boton-juego{
+    margin-top: 3%;
+    margin-left: 2%;
+  }
+
+  .boton-sorpresa {
+  display: inline-block;
+  padding: 20px 40px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Dosis', sans-serif;
+  color: #ffffff;
+  background: linear-gradient(135deg, #00c853, #1de9b6);
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 8px 25px rgba(0, 200, 83, 0.3);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  margin-right: 2%;
+}
+
+.boton-sorpresa::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-20deg);
+  transition: all 0.5s ease-in-out;
+}
+
+.boton-sorpresa:hover {
+  background: linear-gradient(135deg, #5bddbf, #00c853);
+  box-shadow: 0 12px 35px rgba(63, 92, 255, 0.5);
+  transform: scale(1.05);
+  color: white !important;
+}
+
+.boton-sorpresa:hover::before {
+  left: 120%;
+}
+
+
+
+
+
+
+/* mascota */
+
+.hormiga-boton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.hormiga-boton img {
+  width: 100px;
+  transition: transform 0.3s ease;
+}
+
+.hormiga-boton img:hover {
+  transform: scale(1.1);
+}
+
+.faq-container {
+  display: none;
+  position: fixed;
+  bottom: 120px;
+  right: 30px;
+  background-color: #fff;
+  border: 2px solid #4CAF50;
+  padding: 20px;
+  border-radius: 15px;
+  width: 300px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+  font-family: 'Dosis', sans-serif;
+}
+
+#chat {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+#chat p {
+  margin: 5px 0;
+}
+
+#pregunta {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.faq-container h3 {
+  margin-top: 0;
+  color: #1b5e20;
+}
+
+.faq-container ul {
+  padding-left: 20px;
+}
+
+.faq-container button {
+  background-color: #1b5e20;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Mapa */
+
+.titulo-mapa{
+  font-size: 32px;
+  margin: 30px 30px;
+  font-family: 'Dosis', sans-serif;
+  color: rgb(81, 157, 109);
+}
+
+.parrafo-mapa{
+  text-align: center;
+  padding: 5px 82px 60px 126px;
+  font-family: 'Dosis', sans-serif;
+}
+
+
+/* MODAL DE BIENVENIDA */
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-contenido {
+  background-color: #fff;
+  margin: auto;
+  padding: 20px;
+  border: 3px solid #4CAF50;
+  width: 60%;
+  max-width: 500px;
+  text-align: center;
+  border-radius: 15px;
+  font-family: 'Dosis', sans-serif;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.modal-contenido .hormiga-img {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+.cerrar {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cerrar:hover {
+  color: #000;
+}
+
+.cerrar-boton {
+  margin-top: 20px;
+  background-color: #1b5e20;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cerrar-boton:hover {
+  background-color: #43a047;
 }

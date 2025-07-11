@@ -20,13 +20,30 @@
     </div>
     <div class="opciones">
       <ul>
-        <li><a href="">BIENVENIDO</a></li>
-        <li><a href="">JUEGO DE PARES</a></li>
-        <li><a href="">MAPA FNCER COLOMBIA</a></li>
+        <li onclick="abrirModal()">BIENVENIDO</li>
+        <li><a href="juego.html">JUEGO DE PARES</a></li>
+        <li><a href="mapa.html">MAPA FNCER COLOMBIA</a></li>
         <li></li>
       </ul>
     </div>
     
+  </div>
+
+  <div class="hormiga-boton"onclick="mostrarFAQ()">
+    <img src="img/patitech.png" alt="mascota resuelve preguntas" srcset="">
+  </div>
+
+  
+  <!-- Modal o burbuja de ayuda -->
+  <div class="faq-container" id="faq">
+    
+    <h3>Hola, soy Patricia <br> ¿En qué puedo ayudarte hoy?</h3>
+    <div id="chat">
+    <!-- Aquí se mostrarán los mensajes -->
+    </div>
+    <input type="text" id="pregunta" placeholder="Escribe tu pregunta..." onkeydown="if(event.key==='Enter'){responderPregunta();}">
+    <button onclick="responderPregunta()">Preguntar</button>
+    <button onclick="cerrarFAQ()">Cerrar</button>
   </div>
 
 
@@ -50,33 +67,38 @@
 
 
   <div class="card-container">
-    <a href="#" class="card-round">
+    <a href="#solar" class="card-round">
       <div class="icono">
         <img src="img/icono-solar.png" alt="Energía Solar">
       </div>
       <span class="texto">Energía Solar</span>
     </a>
 
-    <a href="#" class="card-round">
+    <a href="#eolica" class="card-round">
       <div class="icono">
         <img src="img/icono-eolica.png" alt="Energía Eólica">
       </div>
       <span class="texto">Energía Eólica</span>
     </a>
 
-    <a href="#" class="card-round">
+    <a href="#hidraulica" class="card-round">
       <div class="icono">
         <img src="img/icono-hidraulica.png" alt="Hidráulica">
       </div>
       <span class="texto"> Energia Hidráulica</span>
     </a>
 
-    <a href="#" class="card-round">
+    <a href="#geotermica" class="card-round">
       <div class="icono">
         <img src="img/icono-geotermica.png" alt="Biomasa">
       </div>
-      <span class="texto">Energia Geotermica</span>
+      <span class="texto">Energia Geotérmica</span>
     </a>
+  </div>
+
+  <div style="text-align: center;" class="boton-juego">
+      <a href="juego.html" class="boton-sorpresa">JUEGO INTERACTIVO</a>
+      <a href="mapa.html" class="boton-sorpresa">MAPA ENERGIAS POTENCIALES EN COLOMBIA</a>
   </div>
 
 
@@ -95,11 +117,12 @@
     </div>
   </div>
 
-  <div class="seccion-tipo1">
+  <div class="seccion-tipo1" id="solar">
     <div class="imagen1">
-      <img src="img/seccion-solar.png" alt="Energia Solar" srcset="">
+      <video src="img/solar.mp4" loop autoplay muted width="770"></video>
     </div>
     <div class="informacion1">
+      <h1 style="text-align: center; margin-top: 50px" class="titulo-seccion1">ENERGIA SOLAR</h1>
       <p class="parrafo1">La energía solar es una forma limpia y renovable de producir electricidad usando la luz del Sol. 
         En países como Colombia, donde el sol brilla con fuerza casi todos los días, esta energía se puede 
         aprovechar muy bien. A través de paneles solares, se puede transformar la luz solar en electricidad 
@@ -112,82 +135,85 @@
 
   </div>
 
-  <div class="seccion-tipo2">
+  <div class="seccion-tipo2" id="eolica">
     <div class="informacion2">
-      <p class="parrafo1">La energía solar es una forma limpia y renovable de producir electricidad usando la luz del Sol. 
-        En países como Colombia, donde el sol brilla con fuerza casi todos los días, esta energía se puede 
-        aprovechar muy bien. A través de paneles solares, se puede transformar la luz solar en electricidad 
-        para encender luces, cargar celulares o incluso mover máquinas, sin contaminar el planeta. Según 
-        estudios, usar energía solar ayuda a reducir los gases que dañan el aire y también permite que muchas 
-        familias, especialmente en zonas rurales, tengan luz en sus casas sin depender de combustibles que 
-        hacen humo o cuestan mucho dinero. Además, esta tecnología puede generar empleos y ayudar a que las 
-        comunidades sean más sostenibles y cuidadosas con el medio ambiente.</p>
+      <h1 style="text-align: center; margin-top: 50px" class="titulo-seccion1">ENERGIA EÓLICA</h1>
+      <p class="parrafo1">La energía eólica es una forma limpia y renovable de producir electricidad usando la fuerza 
+        del viento. En lugares donde el viento sopla con frecuencia, como zonas altas o costeras, esta energía se puede 
+        aprovechar muy bien. A través de aerogeneradores, que son como grandes molinos, se convierte el movimiento del 
+        aire en electricidad sin contaminar el ambiente. Este tipo de energía no produce humo ni ruido fuerte, y ayuda 
+        a reducir los gases que dañan el aire. También permite llevar electricidad a comunidades alejadas y promueve el 
+        uso de tecnologías sostenibles. Además, impulsa la creación de empleos verdes y fomenta el cuidado del planeta 
+        a través de recursos naturales que no se agotan.</p>
     </div>
         <div class="imagen2">
-      <img src="img/seccion-solar.png" alt="Energia Solar" srcset="">
+      <video src="img/eolica.mp4" loop autoplay muted width="750" style="margin-left: 10px;"></video>
     </div>
 
   </div>
 
-    <div class="seccion-tipo1">
+    <div class="seccion-tipo1" id="hidraulica">
       <div class="imagen1">
-        <img src="img/seccion-solar.png" alt="Energia Solar" srcset="">
+        <img src="img/hidraulica.mp4" alt="Energia hidraulica" srcset="">
       </div>
       <div class="informacion1">
-        <p class="parrafo1">La energía solar es una forma limpia y renovable de producir electricidad usando la luz del Sol. 
-          En países como Colombia, donde el sol brilla con fuerza casi todos los días, esta energía se puede 
-          aprovechar muy bien. A través de paneles solares, se puede transformar la luz solar en electricidad 
-          para encender luces, cargar celulares o incluso mover máquinas, sin contaminar el planeta. Según 
-          estudios, usar energía solar ayuda a reducir los gases que dañan el aire y también permite que muchas 
-          familias, especialmente en zonas rurales, tengan luz en sus casas sin depender de combustibles que 
-          hacen humo o cuestan mucho dinero. Además, esta tecnología puede generar empleos y ayudar a que las 
-          comunidades sean más sostenibles y cuidadosas con el medio ambiente.</p>
+        <h1 style="text-align: center; margin-top: 50px" class="titulo-seccion1">ENERGIA HIDRÁULICA</h1>
+        <p class="parrafo1">La energía hidráulica es una fuente limpia y renovable que aprovecha el movimiento del agua 
+          para generar electricidad. En países con ríos abundantes y montañas, como Colombia, esta energía se puede usar 
+          de forma muy eficiente. Por medio de represas o centrales hidroeléctricas, el agua hace girar turbinas que 
+          producen electricidad sin quemar combustibles ni dañar el aire. Esta energía ayuda a iluminar hogares, 
+          escuelas y hospitales, incluso en zonas rurales. También permite reducir la contaminación y apoyar el 
+          desarrollo de comunidades sostenibles. Además, el uso de la energía del agua puede generar empleo local y 
+          proteger los ecosistemas cuando se gestiona de forma responsable.</p>
       </div>
 
     </div>
 
-    <div class="seccion-tipo2">
+    <div class="seccion-tipo2" id="geotermica">
       <div class="informacion2">
-        <p class="parrafo1">La energía solar es una forma limpia y renovable de producir electricidad usando la luz del Sol. 
-          En países como Colombia, donde el sol brilla con fuerza casi todos los días, esta energía se puede 
-          aprovechar muy bien. A través de paneles solares, se puede transformar la luz solar en electricidad 
-          para encender luces, cargar celulares o incluso mover máquinas, sin contaminar el planeta. Según 
-          estudios, usar energía solar ayuda a reducir los gases que dañan el aire y también permite que muchas 
-          familias, especialmente en zonas rurales, tengan luz en sus casas sin depender de combustibles que 
-          hacen humo o cuestan mucho dinero. Además, esta tecnología puede generar empleos y ayudar a que las 
-          comunidades sean más sostenibles y cuidadosas con el medio ambiente.</p>
+        <h1 style="text-align: center; margin-top: 50px" class="titulo-seccion1">ENERGIA GEOTÉRMICA</h1>
+        <p class="parrafo1">La energía geotérmica es una fuente limpia y renovable que proviene del calor que está debajo
+           de la superficie de la Tierra. Este calor se encuentra en las rocas, aguas subterráneas y el vapor del 
+           interior terrestre, y puede usarse para producir electricidad o calentar edificios. En zonas volcánicas o con 
+           aguas termales, este recurso natural se puede aprovechar muy bien. A través de pozos y tuberías especiales, 
+           se extrae ese calor para mover turbinas o sistemas de calefacción sin contaminar el ambiente. Además de ser 
+           constante y confiable, la energía geotérmica ayuda a reducir el uso de combustibles fósiles, genera empleo en 
+           ingeniería y contribuye a que las comunidades sean más sostenibles y cuidadosas con la Tierra.</p>
       </div>
           <div class="imagen2">
-        <img src="img/seccion-solar.png" alt="Energia Solar" srcset="">
+        <img src="img/geotermica.mp4" alt="Energia geotermica" srcset="">
       </div>
 
     </div>
 
-    
+    <div style="text-align: center;" class="boton-juego">
+      <a href="juego.html" class="boton-sorpresa">JUEGO INTERACTIVO</a>
+      <a href="mapa.html" class="boton-sorpresa">MAPA ENERGIAS POTENCIALES EN COLOMBIA</a>
+    </div>
 
+    <!-- Modal de Bienvenida -->
+    <div id="modalBienvenida" class="modal">
+      <div class="modal-contenido">
 
-  <h1>Juego de Parejas: Energías Renovables</h1>
-  <p>Haz clic en las cartas y encuentra las parejas imagen-texto correctas.</p>
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <img src="img/patitech.png" alt="Patricia la Hormiga" class="hormiga-img">
+        <h2>¡Hola! Soy Patricia</h2>
+        <p>Bienvenido a EnerTech. Aquí descubrirás las energías renovables de forma divertida: mapas, juegos y mucha información para cuidar el planeta. 🌎✨</p>
+        <span class="cerrar" onclick="cerrarModal()" style="margin-top: -5%;">OK</span>
+      </div>
+    </div>
 
-  <div class="tablero-juego" id="tablero-juego"></div>
+  
 
   <script src="juego.js"></script>
 
-  <iframe class="mapa-container"
-    src="https://sig.upme.gov.co/portal/apps/experiencebuilder/experience?id=82a2ffd8039b49c6a987248bc022ea02&page=Geotermia"
-    frameborder="0"
-    allowfullscreen>
-  </iframe>
-
-  <div class="creditos">
-    Fuente: 
-    <a href="https://sig.upme.gov.co/" target="_blank" rel="noopener noreferrer">
-      UPME - Visor de Potenciales FNCER
-    </a>
-  </div>
+  <!-- Logo turbina eólica -->
   
   <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
   <dotlottie-wc src="https://lottie.host/18a11c18-bc14-455d-a925-8629d1b77d00/63eYiMskT3.lottie" style="width: 300px;height: 300px" speed="1" autoplay loop></dotlottie-wc>
+
+  
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script src="script.js"></script>
 </body>
