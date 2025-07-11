@@ -1,0 +1,340 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+h1{
+    text-align: center;
+}
+
+
+body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #222;
+    }
+
+
+/* ESTILOS MENU */
+.nav {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  height: 120px;
+  background-color: #d4edda;
+}
+
+.logo {
+  width: 30%;
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+  margin-left: 50px;
+}
+
+.opciones {
+  width: 70%;
+}
+
+.opciones ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 80px;
+}
+
+.opciones ul li {
+  display: inline-block;
+  margin-right: 50px;
+  margin-top: 50px;
+  position: relative; /* Necesario para pseudo-elemento */
+}
+
+.opciones ul li a {
+  text-decoration: none;
+  color: #222;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 5px;
+  font-family: "Dosis", sans-serif;
+  font-weight: 900;
+}
+
+/* Línea animada al hacer hover */
+.opciones ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0%;
+  height: 3px;
+  background-color: green;
+  transition: width 0.3s ease-in-out;
+}
+
+.opciones ul li a:hover::after {
+  width: 100%;
+}
+
+
+/* ESTILOS DE CARDS CATEGORIAS DE ENERGIAS */
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+.card-round {
+  background: linear-gradient(135deg, #d4edda, #b2dfdb);
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #1b5e20;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-round:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #a5d6a7, #80cbc4);
+}
+
+/* Estilo específico para el contenedor del ícono */
+.card-round .icono {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  margin-bottom: 5px;
+}
+
+/* Estilo que asegura que la imagen se vea bien */
+.card-round .icono img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Texto debajo del ícono */
+.card-round .texto {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 10px;
+}
+
+
+
+/* Estilos carrusel */
+.carousel-container {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+
+.carousel-track {
+      display: flex;
+      width: 100%;
+      transition: transform 1s ease;
+    }
+
+.carousel-slide {
+      flex: 0 0 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+
+.slides{
+      width: 100% !important;
+      height: auto;
+
+    }
+
+.slides img{
+      background-size: cover;
+      object-position: center 30!; /* Centra el contenido visual */
+    }
+
+
+
+/* ESTILOS INFORMACIÓN NOSOTROS */
+
+.nosotros{
+  display: flex;
+}
+
+.titulo{
+  font-family: 'Dosis', sans-serif;
+  font-weight: 800;
+  color: rgb(81, 157, 109)
+}
+
+.informacion {
+  width: 60%;
+
+}
+
+.about{
+  font-family: 'Dosis', sans-serif;
+  margin: 90px 20px 40px 60px !important;
+  text-align: justify;
+ 
+  
+}
+
+.imagen img{
+  margin: 39px !important;
+}
+
+.informacion p{
+  margin-right: 10% !important;
+}
+
+.imagenNosotros{
+  width: 40%;
+}
+
+
+
+/* ESTILOS CATEGORIAS DE ENERGIA */
+
+/* SECCION TIPO 1 */
+.seccion-tipo1{
+  margin-top: 1%;
+  display: flex;
+  background-color: #d9ecdd;
+}
+
+.informacion1{
+  width: 50% !important;
+}
+
+.parrafo1{
+  font-family: 'Dosis', sans-serif;
+  padding: 90px 20px !important;
+  text-align: justify;
+}
+
+.imagen1{
+  width: 50% !important;
+}
+
+.imagen1 img{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  padding: 20px;
+}
+
+
+/* SECCION TIPO 2 */
+.seccion-tipo2{
+  margin-top: 1%;
+  display: flex;
+  background-color: #ffffff;
+}
+
+.informacion2{
+  width: 50% !important;
+}
+
+.parrafo2{
+  font-family: 'Dosis', sans-serif;
+  padding: 90px 20px !important;
+  text-align: justify;
+}
+
+.imagen2{
+  width: 50% !important;
+}
+
+.imagen2 img{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  padding: 20px;
+}
+
+
+
+
+
+
+
+
+/* Estilo del iframe */
+.mapa-container {
+  width: 100%;
+  height: 90vh;
+  border: none;
+  display: block;
+}
+
+/* Créditos debajo del mapa */
+.creditos {
+  text-align: center;
+  font-size: 14px;
+  margin: 10px 0;
+  color: #555;
+}
+
+.creditos a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.creditos a:hover {
+  text-decoration: underline;
+}
+/* Juego Parejas */
+.tablero-juego {
+  display: grid;
+  grid-template-columns: repeat(4, 120px);
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.carta {
+  width: 120px;
+  height: 120px;
+  background-color: #e0eceb;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+  border: 2px solid #aae2c1;
+  user-select: none;
+}
+
+.carta.volteada {
+  background-color: #ffffff;
+  border: 2px solid #8bc7a4;
+  text-align: center;
+}
+
+
+.carta.pareja-encontrada {
+  background-color: #d4edda !important; /* verde suave */
+  border: 2px solid #4caf50 !important; /* borde verde */
+}
