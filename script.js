@@ -23,6 +23,10 @@ function responderPregunta() {
   const texto = input.value.toLowerCase();
   let respuesta = "Lo siento, aún no sé responder eso 😢. ¡Pero pronto aprenderé más!";
 
+   // SALUDO Y PRESENTACIÓN
+  if (/(^hola\b|^buenas\b|^qué tal\b|háblame de ti|quién eres|presentate|quien eres)/.test(texto)) {
+    respuesta = "Hola 👋, soy *Patricia*, tu asistente en **Enertech**, experta en energías renovables. Puedes preguntarme sobre energía solar, eólica, hidráulica, geotérmica, biomasa, nuestro mapa interactivo y el juego de memoria. ¡Estoy aquí para ayudarte!";
+  }
   // ENERGÍAS RENOVABLES
   if (texto.includes("solar")) {
     respuesta = "La energía solar convierte la luz del sol en electricidad 🌞";
@@ -63,6 +67,15 @@ function responderPregunta() {
   chat.innerHTML += `<p><strong>Patricia:</strong> ${respuesta}</p>`;
   input.value = "";
   chat.scrollTop = chat.scrollHeight;
+}
+
+//Mostrar Formulario
+function enviarFormulario(e) {
+  e.preventDefault();
+  const nombre = document.getElementById('nombre').value;
+  // Aquí puedes añadir validación o enviar los datos a tu servidor
+  alert('Gracias ' + nombre + ', tu mensaje ha sido enviado.');
+  document.getElementById('formContact').reset();
 }
 
 
