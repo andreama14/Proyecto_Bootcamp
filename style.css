@@ -1,0 +1,928 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+h1{
+    text-align: center;
+}
+
+
+body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #222;
+    }
+
+
+/* ESTILOS MENU */
+.nav {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  height: 120px;
+  background-color: #d4edda;
+}
+
+.logo {
+  width: 30%;
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+  margin-left: 50px;
+}
+
+.opciones {
+  width: 70%;
+}
+
+.opciones ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 80px;
+}
+
+.opciones ul li {
+  display: inline-block;
+  margin-right: 50px;
+  margin-top: 50px;
+  position: relative; /* Necesario para pseudo-elemento */
+}
+
+.opciones ul li a {
+  text-decoration: none;
+  color: #222;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 5px;
+  font-family: "Dosis", sans-serif;
+  font-weight: 900;
+}
+
+/* Línea animada al hacer hover */
+.opciones ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0%;
+  height: 3px;
+  background-color: green;
+  transition: width 0.3s ease-in-out;
+}
+
+.opciones ul li a:hover::after {
+  width: 100%;
+}
+
+
+/* ESTILOS DE CARDS CATEGORIAS DE ENERGIAS */
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+.card-round {
+  background: linear-gradient(135deg, #d4edda, #b2dfdb);
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #1b5e20;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-round:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #a5d6a7, #80cbc4);
+}
+
+/* Estilo específico para el contenedor del ícono */
+.card-round .icono {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  margin-bottom: 5px;
+}
+
+/* Estilo que asegura que la imagen se vea bien */
+.card-round .icono img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Texto debajo del ícono */
+.card-round .texto {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 10px;
+}
+
+
+
+/* Estilos carrusel */
+.carousel-container {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+
+.carousel-track {
+      display: flex;
+      width: 100%;
+      transition: transform 1s ease;
+    }
+
+.carousel-slide {
+      flex: 0 0 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+
+.slides{
+      width: 100% !important;
+      height: auto;
+
+    }
+
+.slides img{
+      background-size: cover;
+      object-position: center 30!; /* Centra el contenido visual */
+    }
+
+
+
+/* ESTILOS INFORMACIÓN NOSOTROS */
+
+.nosotros{
+  display: flex;
+  margin-top: -10%;
+}
+
+.titulo{
+  font-family: 'Dosis', sans-serif;
+  font-weight: 800;
+  color: rgb(81, 157, 109)
+}
+
+.informacion {
+  width: 60%;
+
+}
+
+.about{
+  font-family: 'Dosis', sans-serif;
+  margin: 50px 20px 40px 60px !important;
+  text-align: justify;
+  font-size: 20px;
+  
+}
+
+.imagen img{
+  margin: 39px !important;
+}
+
+.informacion p{
+  margin-right: 10% !important;
+}
+
+.imagenNosotros{
+  width: 40%;
+}
+
+
+
+/* ESTILOS CATEGORIAS DE ENERGIA */
+
+/* SECCION TIPO 1 */
+.seccion-tipo1{
+  margin-top: 1%;
+  display: flex;
+  background-color: #d9ecdd;
+}
+
+.titulo-seccion1{
+  font-family: 'Dosis', sans-serif;
+  font-weight: 800;
+  color: rgb(81, 157, 109);
+}
+
+.informacion1{
+  width: 50% !important;
+}
+
+.parrafo1{
+  font-family: 'Dosis', sans-serif;
+  padding: 90px 20px !important;
+  text-align: justify;
+  padding-right: 50px !important;
+  padding-left: 70px !important;
+  font-size: 18px;
+  margin-top: -15%;
+  margin-bottom: -38px !important;
+}
+
+.imagen1{
+  width: 50% !important;
+}
+
+.imagen1 img{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  padding: 20px;
+}
+
+
+/* SECCION TIPO 2 */
+.seccion-tipo2{
+  margin-top: 1%;
+  display: flex;
+  background-color: #ffffff;
+}
+
+.informacion2{
+  width: 50% !important;
+}
+
+.parrafo2{
+  font-family: 'Dosis', sans-serif;
+  padding: 90px 20px !important;
+  text-align: justify;
+  padding-right: 50px !important;
+  padding-left: 70px !important;
+  font-size: 18px;
+}
+
+.imagen2{
+  width: 50% !important;
+}
+
+.imagen2 img{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  padding: 20px;
+}
+
+
+
+
+/* Estilo del iframe */
+.mapa-container {
+  width: 100%;
+  height: 90vh;
+  max-width: 100%;
+  border: none;
+  display: block;
+  overflow: hidden;
+}
+
+
+/* Créditos debajo del mapa */
+.creditos {
+  text-align: center;
+  font-size: 14px;
+  margin: 10px 0;
+  color: #555;
+}
+
+.creditos a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.creditos a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+/* Juego Parejas */
+
+.titulo-juego{
+   font-family: 'Dosis', sans-serif;
+   color: rgb(81, 157, 109);
+   text-transform: uppercase;
+   margin-top: 111px;
+  font-size: 32px;
+  margin: 0;
+  font-family: 'Dosis', sans-serif;
+  color: #1b5e20;
+  margin-top: 0px !important;
+  
+}
+
+.parrafo-juego{
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-top: 20px;
+  font-size: 18px;
+  margin-top: 10px;
+  font-family: 'Dosis', sans-serif;
+  color: #444;
+}
+
+
+
+.tablero-juego {
+  display: grid;
+  grid-template-columns: repeat(4, 120px);
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.carta {
+  width: 120px;
+  height: 120px;
+  background-color: #e0eceb;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+  border: 2px solid #aae2c1;
+  user-select: none;
+}
+
+.carta.volteada {
+  background-color: #ffffff;
+  border: 2px solid #8bc7a4;
+  text-align: center;
+}
+
+
+.carta.pareja-encontrada {
+  background-color: #d4edda !important; /* verde suave */
+  border: 2px solid #4caf50 !important; /* borde verde */
+}
+
+/* Posiciona el sol al ladito del texto */
+.sol-lottie {
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 320px); /* ajusta para que quede "al ladito derecho" */
+  transform: translateY(-50%);
+  width: 150px;
+  height: 150px;
+  z-index: 1;
+}
+
+
+
+/* ESTILOS BOTÓN DE JUEGO */
+
+  .boton-juego{
+    margin-top: 3%;
+    margin-left: 2%;
+  }
+
+  .boton-sorpresa {
+  display: inline-block;
+  padding: 20px 40px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Dosis', sans-serif;
+  color: #ffffff;
+  background: linear-gradient(135deg, #00c853, #1de9b6);
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 8px 25px rgba(0, 200, 83, 0.3);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  margin-right: 2%;
+  margin-bottom: 10%;
+}
+
+.boton-sorpresa::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-20deg);
+  transition: all 0.5s ease-in-out;
+}
+
+.boton-sorpresa:hover {
+  background: linear-gradient(135deg, #5bddbf, #00c853);
+  box-shadow: 0 12px 35px rgba(63, 92, 255, 0.5);
+  transform: scale(1.05);
+  color: white !important;
+}
+
+.boton-sorpresa:hover::before {
+  left: 120%;
+}
+
+
+
+
+
+
+/* mascota */
+
+.hormiga-boton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.hormiga-boton img {
+  width: 100px;
+  transition: transform 0.3s ease;
+}
+
+.hormiga-boton img:hover {
+  transform: scale(1.1);
+}
+
+.faq-container {
+  display: none;
+  position: fixed;
+  bottom: 120px;
+  right: 30px;
+  background-color: #fff;
+  border: 2px solid #4CAF50;
+  padding: 20px;
+  border-radius: 15px;
+  width: 300px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+  font-family: 'Dosis', sans-serif;
+}
+
+#chat {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+#chat p {
+  margin: 5px 0;
+}
+
+#pregunta {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.faq-container h3 {
+  margin-top: 0;
+  color: #1b5e20;
+}
+
+.faq-container ul {
+  padding-left: 20px;
+}
+
+.faq-container button {
+  background-color: #1b5e20;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Mapa */
+
+.titulo-mapa{
+  font-size: 32px;
+  margin: 30px 30px;
+  font-family: 'Dosis', sans-serif;
+  color: rgb(81, 157, 109);
+}
+
+.parrafo-mapa{
+  text-align: center;
+  padding: 5px 82px 60px 126px;
+  font-family: 'Dosis', sans-serif;
+}
+
+
+/* MODAL DE BIENVENIDA */
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-contenido {
+  background-color: #fff;
+  margin: auto;
+  padding: 20px;
+  border: 3px solid #4CAF50;
+  width: 60%;
+  max-width: 500px;
+  text-align: center;
+  border-radius: 15px;
+  font-family: 'Dosis', sans-serif;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.modal-contenido .hormiga-img {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+.cerrar {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cerrar:hover {
+  color: #000;
+}
+
+.cerrar-boton {
+  margin-top: 20px;
+  background-color: #1b5e20;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cerrar-boton:hover {
+  background-color: #43a047;
+}
+
+
+
+
+/* ============================
+   RESPONSIVE DESIGN (Moviles)
+============================= */
+
+@media (max-width: 768px) {
+  
+  /* NAVBAR */
+  .nav {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .logo img {
+    margin: 0 auto;
+  }
+
+  .opciones {
+    width: 100%;
+    margin: 0;
+  }
+
+  .opciones ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .opciones ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  /* NOSOTROS */
+  .nosotros {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .información,
+  .imagen {
+    width: 90% !important;
+    text-align: center;
+  }
+
+  .imagen img {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .about {
+    margin: 20px !important;
+    font-size: 16px;
+  }
+
+  /* CATEGORÍAS */
+  .seccion-tipo1,
+  .seccion-tipo2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imagen1,
+  .imagen2,
+  .informacion1,
+  .informacion2 {
+    width: 100% !important;
+    padding: 10px;
+  }
+
+  .parrafo1, .parrafo2 {
+    padding: 20px !important;
+    margin: 0 !important;
+    font-size: 16px;
+  }
+
+  /* CARRUSEL */
+  .carousel-container {
+    height: 200px;
+  }
+
+  .slides {
+    height: auto;
+  }
+
+  /* CARDS */
+  .card-container {
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .card-round {
+    width: 100px;
+    height: 100px;
+  }
+
+  .card-round .icono img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .card-round .texto {
+    font-size: 12px;
+  }
+
+  /* BOTONES */
+  .boton-juego {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  .boton-sorpresa {
+    margin-bottom: 15px;
+    width: 80%;
+    text-align: center;
+    font-size: 16px;
+    padding: 15px 20px;
+  }
+
+  /* FORMULARIO */
+  #contacto .container {
+    padding: 10px;
+  }
+
+  #contacto input,
+  #contacto textarea {
+    font-size: 16px;
+  }
+
+  /* MODAL */
+  .modal-contenido {
+    width: 90%;
+  }
+
+  /* HORMIGA */
+  .hormiga-boton img {
+    width: 70px;
+  }
+
+  .faq-container {
+    width: 90%;
+    right: 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  video {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .imagen1 video,
+  .imagen2 video {
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .video-responsive{
+    margin-left: 0px !important;
+  }
+}
+
+
+
+/* ============================
+   RESPONSIVE JUEGO DESIGN (Moviles)
+============================= */
+@media (max-width: 768px) {
+  /* Juego de 4 columnas por 3 filas, tamaño reducido */
+  .tablero-juego {
+    grid-template-columns: repeat(4, 70px);
+    gap: 10px;
+    margin: 20px auto;
+  }
+
+  .carta {
+    width: 70px;
+    height: 70px;
+    font-size: 10px;
+    padding: 5px;
+  }
+
+  .titulo-juego {
+    font-size: 18px;
+    margin: 15px 10px 5px 10px;
+  }
+
+  .parrafo-juego {
+    font-size: 13px;
+    margin: 10px 15px;
+  }
+
+  .sol-lottie {
+    width: 180px;
+    height: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 27%;
+  }
+
+  .tablero{
+    margin-top: 10% !important;
+  }
+}
+
+
+/* ============================
+   RESPONSIVE MAPA DESIGN (Moviles)
+============================= */
+
+
+@media (max-width: 768px) {
+  .mapa-container {
+    height: 80vh;
+    min-height: 400px;
+  }
+
+  .titulo-mapa {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px;
+  }
+
+  .parrafo-mapa {
+    font-size: 14px;
+    padding: 10px 20px;
+    text-align: justify;
+  }
+}
+
+
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 1; /* ponlo en 1 para test */
+  background-color: rgb(7, 85, 46); /* solo para probar si lo estás viendo */
+}
+
+
+@media (max-width: 768px) {
+  .titulo-equipo {
+    font-size: 22px;
+    margin: 20px 10px;
+  }
+
+  .red-nodos {
+    max-width: 300px;
+    height: 300px;
+    margin: 30px auto;
+    position: relative;
+  }
+
+  .nodo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .nodo-central {
+    width: 90px;
+    height: 90px;
+  }
+
+  /* Reposicionar nodos más cerca del centro */
+  .nodo1 { top: 10px; left: 10px; }
+  .nodo2 { top: 10px; right: 10px; }
+  .nodo3 { bottom: 10px; left: 10px; }
+  .nodo4 { bottom: 10px; right: 10px; }
+
+  /* Reposicionar líneas si las necesitas ajustadas también */
+  .linea1 {
+    top: 45px;
+    left: 45px;
+    width: calc(100% - 90px);
+    height: 3px;
+  }
+
+  .linea2 {
+    top: 45px;
+    left: 45px;
+    height: calc(100% - 90px);
+    width: 3px;
+  }
+
+  .linea3 {
+    top: 45px;
+    right: 45px;
+    height: calc(100% - 90px);
+    width: 3px;
+  }
+
+  .linea4 {
+    bottom: 45px;
+    left: 45px;
+    width: calc(100% - 90px);
+    height: 3px;
+  }
+
+  .linea5, .linea6 {
+    display: none; /* opcional: oculta las diagonales */
+  }
+
+  .titulo-equipo {
+    position: relative;
+    z-index: 5;
+}
+}

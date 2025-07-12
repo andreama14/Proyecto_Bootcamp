@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+  <!-- Modal o burbuja de ayuda -->
+  <div class="faq-container" id="faq">
+    
+    <h3>Hola, soy Patricia <br> ¿En qué puedo ayudarte hoy?</h3>
+    <div id="chat">
+    <!-- Aquí se mostrarán los mensajes -->
+    </div>
+    <input type="text" id="pregunta" placeholder="Escribe tu pregunta..." onkeydown="if(event.key==='Enter'){responderPregunta();}">
+    <button onclick="responderPregunta()">Preguntar</button>
+    <button onclick="cerrarFAQ()">Cerrar</button>
+  </div>
+    <div class="juego">
+    <!-- GIF del Sol -->
+    <div class="gif">
+      <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
+      <dotlottie-wc
+        src="https://lottie.host/8c0c2e15-09e8-4178-ba2c-a5e1b18f1167/nKOc8nMROP.lottie"
+        class="sol-lottie"
+        speed="1"
+        autoplay
+        loop>
+      </dotlottie-wc>
+    </div>
+
+    <div class="hormiga-boton"onclick="mostrarFAQ()">
+    <img src="img/patitech.png" alt="mascota resuelve preguntas" srcset="">
+    </div>
+
+    <!-- Texto centrado -->
+    <div class="tablero" style="margin-top: 3%;"">
+      <h1 class="titulo-juego">Juego de Parejas: Energías Renovables</h1>
+      <p class="parrafo-juego">Haz clic en las cartas y encuentra las parejas imagen-texto correctas.</p>
+    </div>
+  </div>
+
+    
+
+  <div class="tablero-juego" id="tablero-juego"></div>
+
+  <center>
+  <a href="index.html" class="boton-sorpresa" style="margin-top: 5%;">VOLVER</a>
+  </center>
+
+  <script src="juego.js"></script>
+ 
+</body>
+</html>
+
