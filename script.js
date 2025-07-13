@@ -94,3 +94,9 @@ function enviarFormulario(e) {
     document.getElementById("modalBienvenida").style.display = "none";
   }
 
+/* Volver arriba */
+window.onscroll = function () {
+  const boton = document.querySelector('.volver-arriba');
+  boton.style.display = window.scrollY > 300 ? 'block' : 'none';
+};
+

@@ -392,6 +392,7 @@ body {
   width: 150px;
   height: 150px;
   z-index: 1;
+ 
 }
 
 
@@ -420,6 +421,7 @@ body {
   transition: all 0.4s ease-in-out;
   margin-right: 2%;
   margin-bottom: 10%;
+  top: 20px;
 }
 
 .boton-sorpresa::before {
@@ -728,7 +730,7 @@ body {
     font-size: 16px;
     padding: 15px 20px;
   }
-
+ 
   /* FORMULARIO */
   #contacto .container {
     padding: 10px;
@@ -747,6 +749,8 @@ body {
   /* HORMIGA */
   .hormiga-boton img {
     width: 70px;
+    /* traer adelante */
+    z-index: 1000;
   }
 
   .faq-container {
@@ -810,8 +814,11 @@ body {
     width: 180px;
     height: 180px;
     left: 50%;
+    top: 40%;
     transform: translateX(-50%);
     margin-top: 27%;
+  /* Enviar atras */
+  z-index: -1; /* Asegúrate de que el sol esté detrás del contenido */
   }
 
   .tablero{
@@ -925,4 +932,22 @@ body {
     position: relative;
     z-index: 5;
 }
+}
+/* Botón volver arriba */
+.volver-arriba {
+  position: fixed;
+  bottom: 20px; 
+  left: 20px; 
+  background-color: #00c853;
+  color: white;
+  padding: 12px 14px;
+  border-radius: 50%;
+  font-size: 18px;
+  display: none;
+  z-index: 999;
+  transition: all 0.3s ease-in-out;
+}
+.volver-arriba:hover {
+  background-color: #59be83;
+  transform: scale(1.1);
 }
