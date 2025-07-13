@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>EnerTech</title>
+</head>
+
+<body>
+
+
+
+  <div class="nav">
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo EnerTech">
+    </div>
+    <div class="opciones">
+      <ul>
+        <li><a href="equipo.html">CAMPISTAS</a></li>
+        <li><a href="juego.html">JUEGO DE PARES</a></li>
+        <li><a href="mapa.html">MAPA FNCER COLOMBIA</a></li>
+        <li></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="hormiga-boton" onclick="mostrarFAQ()">
+    <img src="img/patitech.png" alt="mascota resuelve preguntas" srcset="">
+  </div>
+
+
+  <!-- Modal o burbuja de ayuda -->
+  <div class="faq-container" id="faq">
+
+    <h3>Hola, soy Patricia <br> ¿En qué puedo ayudarte hoy?</h3>
+    <div id="chat">
+      <!-- Aquí se mostrarán los mensajes -->
+    </div>
+    <input type="text" id="pregunta" placeholder="Escribe tu pregunta..."
+      onkeydown="if(event.key==='Enter'){responderPregunta();}">
+    <button onclick="responderPregunta()">Preguntar</button>
+    <button onclick="cerrarFAQ()">Cerrar</button>
+  </div>
+
+
+  <!-- Carrusel -->
+  <div class="carousel-container">
+    <div class="carousel-track" id="carouselTrack">
+      <div class="carousel-slide" onclick="location.href='#seccion1'">
+        <img src="img/slide1.png" alt="Imagen Energia solar" class="slides">
+      </div>
+      <div class="carousel-slide" onclick="location.href='#seccion2'">
+        <img src="img/slide2.png" alt="Imagen Energia Eolica" class="slides">
+      </div>
+      <div class="carousel-slide" onclick="location.href='#seccion3'">
+        <img src="img/slide3.png" alt="Imagen energia Hidraulicar" class="slides">
+      </div>
+      <div class="carousel-slide" onclick="location.href='#seccion4'">
+        <img src="img/slide4.png" alt="Imagen Energia Geotermica" class="slides">
+      </div>
+    </div>
+  </div>
+
+  <!-- cartas iconos -->
+  <div class="card-container">
+    <a href="#solar" class="card-round">
+      <div class="icono">
+        <img src="img/icono-solar.png" alt="Energía Solar">
+      </div>
+      <span class="texto">Energía Solar</span>
+    </a>
+
+    <a href="#eolica" class="card-round">
+      <div class="icono">
+        <img src="img/icono-eolica.png" alt="Energía Eólica">
+      </div>
+      <span class="texto">Energía Eólica</span>
+    </a>
+
+    <a href="#hidraulica" class="card-round">
+      <div class="icono">
+        <img src="img/icono-hidraulica.png" alt="Hidráulica">
+      </div>
+      <span class="texto"> Energia Hidráulica</span>
+    </a>
+
+    <a href="#geotermica" class="card-round">
+      <div class="icono">
+        <img src="img/icono-geotermica.png" alt="Biomasa">
+      </div>
+      <span class="texto">Energia Geotérmica</span>
+    </a>
+  </div>
+  <!-- Boton juego y mapa -->
+  <div style="text-align: center;" class="boton-juego">
+    <a href="juego.html" class="boton-sorpresa">JUEGO INTERACTIVO</a>
+    <a href="mapa.html" class="boton-sorpresa">MAPA ENERGIAS POTENCIALES EN COLOMBIA</a>
+  </div>
+
+  <!-- About us -->
+  <div class="nosotros">
+    <div class="información">
+      <h1 style="text-align: center; margin-top: 150px" class="titulo">¿QUIENES SOMOS?</h1>
+      <p class="about">El bootcamp de la universidad de Caldas enfocado en este caso en el aprendizaje de habilidades
+        de programación, unió a 4 personas con distintas capacidades para realizar este proyecto con
+        objetivo de compartir información con relación a energias renovables. Este iniciativa del gobierno
+        permitió conectar a docentes altamente calificados con estudiantes y personas del común para
+        cultivar conocimientos que abrirán puertas en esta nueva generación digital y permitir una
+        transformación social.</p>
+    </div>
+    <div class="imagen">
+      <img style="width: 600px;" src="img/nosotros.png" alt="nostros">
+    </div>
+  </div>
+
+  <div class="seccion-tipo1" id="solar">
+    <div class="imagen1">
+      <video src="img/solar.mp4" loop autoplay muted width="700"></video>
+    </div>
+    <div class="informacion1">
+      <h1 style="text-align: center; margin-top: 20px" class="titulo-seccion1">ENERGIA SOLAR</h1>
+      <p class="parrafo1">La energía solar es una forma limpia y renovable de producir electricidad usando la luz del
+        Sol.
+        En países como Colombia, donde el sol brilla con fuerza casi todos los días, esta energía se puede
+        aprovechar muy bien. A través de paneles solares, se puede transformar la luz solar en electricidad
+        para encender luces, cargar celulares o incluso mover máquinas, sin contaminar el planeta. Según
+        estudios, usar energía solar ayuda a reducir los gases que dañan el aire y también permite que muchas
+        familias, especialmente en zonas rurales, tengan luz en sus casas sin depender de combustibles que
+        hacen humo o cuestan mucho dinero. Además, esta tecnología puede generar empleos y ayudar a que las
+        comunidades sean más sostenibles y cuidadosas con el medio ambiente.</p>
+    </div>
+
+  </div>
+
+  <div class="seccion-tipo2" id="eolica">
+    <div class="informacion2">
+      <h1 style="text-align: center; margin-top: 50px" class="titulo-seccion1">ENERGIA EÓLICA</h1>
+      <p class="parrafo1">La energía eólica es una forma limpia y renovable de producir electricidad usando la fuerza
+        del viento. En lugares donde el viento sopla con frecuencia, como zonas altas o costeras, esta energía se puede
+        aprovechar muy bien. A través de aerogeneradores, que son como grandes molinos, se convierte el movimiento del
+        aire en electricidad sin contaminar el ambiente. Este tipo de energía no produce humo ni ruido fuerte, y ayuda
+        a reducir los gases que dañan el aire. También permite llevar electricidad a comunidades alejadas y promueve el
+        uso de tecnologías sostenibles. Además, impulsa la creación de empleos verdes y fomenta el cuidado del planeta
+        a través de recursos naturales que no se agotan.</p>
+    </div>
+    <div class="imagen2">
+      <video class="video-responsive" src="img/eolica.mp4" loop autoplay muted width="655" style="margin-left: 20px;"></video>
+    </div>
+
+  </div>
+
+  <div class="seccion-tipo1" id="hidraulica">
+    <div class="imagen1">
+      <video src="img/hidraulica.mp4" loop autoplay muted width="700"></video>
+    </div>
+    <div class="informacion1">
+      <h1 style="text-align: center; margin-top: 50px" class="titulo-seccion1">ENERGIA HIDRÁULICA</h1>
+      <p class="parrafo1">La energía hidráulica es una fuente limpia y renovable que aprovecha el movimiento del agua
+        para generar electricidad. En países con ríos abundantes y montañas, como Colombia, esta energía se puede usar
+        de forma muy eficiente. Por medio de represas o centrales hidroeléctricas, el agua hace girar turbinas que
+        producen electricidad sin quemar combustibles ni dañar el aire. Esta energía ayuda a iluminar hogares,
+        escuelas y hospitales, incluso en zonas rurales. También permite reducir la contaminación y apoyar el
+        desarrollo de comunidades sostenibles. Además, el uso de la energía del agua puede generar empleo local y
+        proteger los ecosistemas cuando se gestiona de forma responsable.</p>
+    </div>
+
+  </div>
+
+  <div class="seccion-tipo2" id="geotermica">
+    <div class="informacion2">
+      <h1 style="text-align: center; margin-top: 50px" class="titulo-seccion1">ENERGIA GEOTÉRMICA</h1>
+      <p class="parrafo1">La energía geotérmica es una fuente limpia y renovable que proviene del calor que está debajo
+        de la superficie de la Tierra. Este calor se encuentra en las rocas, aguas subterráneas y el vapor del
+        interior terrestre, y puede usarse para producir electricidad o calentar edificios. En zonas volcánicas o con
+        aguas termales, este recurso natural se puede aprovechar muy bien. A través de pozos y tuberías especiales,
+        se extrae ese calor para mover turbinas o sistemas de calefacción sin contaminar el ambiente. Además de ser
+        constante y confiable, la energía geotérmica ayuda a reducir el uso de combustibles fósiles, genera empleo en
+        ingeniería y contribuye a que las comunidades sean más sostenibles y cuidadosas con la Tierra.</p>
+    </div>
+    <div class="imagen2">
+      <video class="video-responsive" src="img/geotermica.mp4" loop autoplay muted width="655" style="margin-left: 20px;"></video>
+    </div>
+
+  </div>
+ <!-- Boton juego y mapa -->
+  <div style="text-align: center;" class="boton-juego">
+    <a href="juego.html" class="boton-sorpresa">JUEGO INTERACTIVO</a>
+    <a href="mapa.html" class="boton-sorpresa">MAPA ENERGIAS POTENCIALES EN COLOMBIA</a>
+  </div>
+
+  <!-- Modal de Bienvenida -->
+  <div id="modalBienvenida" class="modal">
+    <div class="modal-contenido">
+
+      <span class="cerrar" onclick="cerrarModal()">&times;</span>
+      <img src="img/patitech.png" alt="Patricia la Hormiga" class="hormiga-img">
+      <h2>¡Hola! Soy Patricia</h2>
+      <p>Bienvenido a EnerTech. Aquí descubrirás las energías renovables de forma divertida: mapas, juegos y mucha
+        información para cuidar el planeta. 🌎✨</p>
+      <span class="cerrar" onclick="cerrarModal()" style="margin-top: -5%;">OK</span>
+    </div>
+  </div>
+
+  <!-- Logo turbina eólica -->
+  <center>
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
+    <dotlottie-wc src="https://lottie.host/18a11c18-bc14-455d-a925-8629d1b77d00/63eYiMskT3.lottie"
+    style="width: 300px;height: 300px" speed="1" autoplay loop></dotlottie-wc>
+  </center>
+
+
+
+  <!-- CONTACTO (Formulario) -->
+<!-- CONTACTO (Formulario con Formspree) -->
+<section id="contacto" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Contáctanos</h2>
+    <form action="https://formspree.io/f/xeokyweq" method="POST">
+      <input type="hidden" name="_subject" value="Nuevo mensaje desde EnerTech">
+      <div class="mb-3">
+        <label for="name" class="form-label">Nombre</label>
+        <input type="text" id="name" name="name" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Correo electrónico</label>
+        <input type="email" id="email" name="_replyto" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="mensaje" class="form-label">Mensaje</label>
+        <textarea id="mensaje" name="message" class="form-control" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-success">Enviar</button>
+    </form>
+  </div>
+</section>
+
+
+<!-- PIE DE PÁGINA: datos de la empresa -->
+<footer class="py-3" style="background-color: #305732; color: #fff;">
+  <div class="container text-center">
+    <p class="mb-1"><strong>EnerTech</strong> | Energías Renovables</p>
+    <p class="mb-1"><i class="fa-brands fa-whatsapp"></i> WhatsApp: +57 304 3201986 | <i class="fa-solid fa-envelope"></i> Correo: contacto@enertech.com.co</p>
+    <p>
+      Síguenos: 
+      <a href="#" style="color: #fff; text-decoration: underline;">
+        <i class="fa-brands fa-square-facebook"></i> Facebook</a> •
+      <a href="#" style="color: #fff; text-decoration: underline;"><i class="fa-brands fa-instagram"></i> Instagram</a> •
+      <a href="#" style="color: #fff; text-decoration: underline;"><i class="fa-brands fa-x-twitter"></i> Twitter</a>
+    </p>
+  </div>
+</footer>
+
+<!-- Volver arriba -->
+ <a href="#" class="volver-arriba"><i class="fa-solid fa-arrow-up"></i></a>
+
+  <script src="juego.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
