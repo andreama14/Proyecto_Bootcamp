@@ -179,7 +179,10 @@ body {
 
 .nosotros{
   display: flex;
+<<<<<<< HEAD
   margin-top: -10%;
+=======
+>>>>>>> 860e2d0e2b8da74ebe662abb52422f651766bc76
 }
 
 .titulo{
@@ -241,8 +244,13 @@ body {
   padding-right: 50px !important;
   padding-left: 70px !important;
   font-size: 18px;
+<<<<<<< HEAD
   margin-top: -15%;
   margin-bottom: -38px !important;
+=======
+  margin-top: -10%;
+  margin-bottom: -28px !important;
+>>>>>>> 860e2d0e2b8da74ebe662abb52422f651766bc76
 }
 
 .imagen1{
@@ -291,10 +299,18 @@ body {
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 860e2d0e2b8da74ebe662abb52422f651766bc76
 /* Estilo del iframe */
 .mapa-container {
   width: 100%;
   height: 90vh;
+<<<<<<< HEAD
   max-width: 100%;
   border: none;
   display: block;
@@ -302,6 +318,12 @@ body {
 }
 
 
+=======
+  border: none;
+  display: block;
+}
+
+>>>>>>> 860e2d0e2b8da74ebe662abb52422f651766bc76
 /* Créditos debajo del mapa */
 .creditos {
   text-align: center;
@@ -320,7 +342,11 @@ body {
 }
 
 
+<<<<<<< HEAD
 
+=======
+/* Juego Parejas */
+>>>>>>> 860e2d0e2b8da74ebe662abb52422f651766bc76
 
 /* Juego Parejas */
 
@@ -419,8 +445,11 @@ body {
   overflow: hidden;
   transition: all 0.4s ease-in-out;
   margin-right: 2%;
+<<<<<<< HEAD
   margin-bottom: 10%;
   top: 20px;
+=======
+>>>>>>> 860e2d0e2b8da74ebe662abb52422f651766bc76
 }
 
 .boton-sorpresa::before {
@@ -599,6 +628,7 @@ body {
 .cerrar-boton:hover {
   background-color: #43a047;
 }
+<<<<<<< HEAD
 
 
 
@@ -950,3 +980,5 @@ body {
   background-color: #59be83;
   transform: scale(1.1);
 }
+=======
+>>>>>>> 860e2d0e2b8da74ebe662abb52422f651766bc76
