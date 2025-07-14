@@ -57,6 +57,11 @@ cartas.forEach((carta, index) => {
         sonidoExito.play(); // 🔊 Reproducir sonido
         primeraCarta = null;
         bloquear = false;
+
+        // Contar parejas
+        parejasEncontradas++;
+        verificarFinDelJuego();
+
       } else {
         // No coinciden
         setTimeout(() => {
@@ -68,11 +73,25 @@ cartas.forEach((carta, index) => {
           bloquear = false;
         }, 1000);
       }
+
     }
   });
 
   tablero.appendChild(div);
 });
+let parejasEncontradas = 0;
+
+function verificarFinDelJuego() {
+  if (parejasEncontradas === energias.length) {
+    const mensaje = document.getElementById("mensaje-final");
+    mensaje.style.display = "block";
+
+    // Ocultar el mensaje después de 3 segundos (3000 ms)
+    setTimeout(() => {
+      mensaje.style.display = "none";
+    }, 3000);
+  }
+}
 
 
 /* Patricia */
