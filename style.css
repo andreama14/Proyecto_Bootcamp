@@ -378,6 +378,11 @@ body {
   text-align: center;
 }
 
+.carta.volteada img{
+  width: 60px;
+  height: 60px;
+}
+
 
 .carta.pareja-encontrada {
   background-color: #d4edda !important; /* verde suave */
@@ -809,11 +814,12 @@ body {
 ============================= */
 @media (max-width: 768px) {
   /* Juego de 4 columnas por 3 filas, tamaño reducido */
-  .tablero-juego {
-    grid-template-columns: repeat(4, 70px);
-    gap: 10px;
-    margin: 20px auto;
-  }
+ .tablero-juego {
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 10px;
+  margin: 30px auto;
+  padding: 20px;
+}
 
   .carta {
     width: 70px;
@@ -821,6 +827,15 @@ body {
     font-size: 10px;
     padding: 5px;
   }
+
+.carta.volteada {
+  background-color: #ffffff;
+  border: 2px solid #8bc7a4;
+  text-align: center;
+  width: 70px !important;
+  height: 70px !important;
+}
+
 
   .titulo-juego {
     font-size: 18px;
