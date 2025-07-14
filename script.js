@@ -25,7 +25,9 @@ function responderPregunta() {
 
    // SALUDO Y PRESENTACIÓN
   if (/(^hola\b|^buenas\b|^qué tal\b|háblame de ti|quién eres|presentate|quien eres)/.test(texto)) {
-    respuesta = "Hola 👋, soy *Patricia*, tu asistente en **Enertech**, experta en energías renovables. Puedes preguntarme sobre energía solar, eólica, hidráulica, geotérmica, biomasa, nuestro mapa interactivo y el juego de memoria. ¡Estoy aquí para ayudarte!";
+
+    respuesta = "Hola 👋, soy Patricia, tu asistente en Enertech, experta en energías renovables. Puedes preguntarme sobre energía solar, eólica, hidráulica, geotérmica, nuestro mapa interactivo y el juego de memoria. ¡Estoy aquí para ayudarte!";
+
   }
   // ENERGÍAS RENOVABLES
   if (texto.includes("solar")) {
@@ -36,8 +38,7 @@ function responderPregunta() {
     respuesta = "La energía hidráulica usa el agua en movimiento, como ríos, para producir electricidad 💧";
   } else if (texto.includes("geotérmica") || texto.includes("geotermica")) {
     respuesta = "La energía geotérmica viene del calor que hay debajo de la Tierra 🌋";
-  } else if (texto.includes("biomasa")) {
-    respuesta = "La biomasa transforma residuos orgánicos en energía útil 🌱";
+
 
   // MAPA INTERACTIVO (UPME)
   } else if (texto.includes("mapa") || texto.includes("visor")) {
@@ -80,26 +81,34 @@ function enviarFormulario(e) {
 
 
 
+
 //MODAL DE BIENVENIDA
   // Mostrar modal al cargar la página
-  window.onload = function () {
-    abrirModal();
-  };
 
-  function abrirModal() {
-    document.getElementById("modalBienvenida").style.display = "block";
-  }
 
-  function cerrarModal() {
-    document.getElementById("modalBienvenida").style.display = "none";
-  }
 
-<<<<<<< HEAD
 /* Volver arriba */
+
+// Mostrar el modal SOLO si no ha sido mostrado en esta sesión
+window.onload = function () {
+  if (!sessionStorage.getItem("modalMostrado")) {
+    abrirModal();
+    sessionStorage.setItem("modalMostrado", "true");
+  }
+};
+
+function abrirModal() {
+  document.getElementById("modalBienvenida").style.display = "block";
+}
+
+function cerrarModal() {
+  document.getElementById("modalBienvenida").style.display = "none";
+}
+
+// Mostrar botón de volver arriba al hacer scroll
+
 window.onscroll = function () {
   const boton = document.querySelector('.volver-arriba');
   boton.style.display = window.scrollY > 300 ? 'block' : 'none';
 };
 
-=======
->>>>>>> 860e2d0e2b8da74ebe662abb52422f651766bc76

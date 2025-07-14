@@ -179,10 +179,7 @@ body {
 
 .nosotros{
   display: flex;
-<<<<<<< HEAD
   margin-top: -10%;
-=======
->>>>>>> 860e2d0e2b8da74ebe662abb52422f651766bc76
 }
 
 .titulo{
@@ -231,6 +228,7 @@ body {
   font-family: 'Dosis', sans-serif;
   font-weight: 800;
   color: rgb(81, 157, 109);
+  margin: 25px;
 }
 
 .informacion1{
@@ -244,13 +242,12 @@ body {
   padding-right: 50px !important;
   padding-left: 70px !important;
   font-size: 18px;
-<<<<<<< HEAD
   margin-top: -15%;
   margin-bottom: -38px !important;
-=======
   margin-top: -10%;
   margin-bottom: -28px !important;
->>>>>>> 860e2d0e2b8da74ebe662abb52422f651766bc76
+  margin-top: -15%;
+  margin-bottom: -38px !important;
 }
 
 .imagen1{
@@ -298,19 +295,10 @@ body {
 
 
 
-
-<<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> 860e2d0e2b8da74ebe662abb52422f651766bc76
 /* Estilo del iframe */
 .mapa-container {
   width: 100%;
   height: 90vh;
-<<<<<<< HEAD
   max-width: 100%;
   border: none;
   display: block;
@@ -318,12 +306,6 @@ body {
 }
 
 
-=======
-  border: none;
-  display: block;
-}
-
->>>>>>> 860e2d0e2b8da74ebe662abb52422f651766bc76
 /* Créditos debajo del mapa */
 .creditos {
   text-align: center;
@@ -343,7 +325,6 @@ body {
 
 
 
-/* Juego Parejas */
 
 /* Juego Parejas */
 
@@ -401,6 +382,12 @@ body {
 }
 
 
+.carta.volteada img{
+  width: 60px;
+  height: 60px;
+}
+
+
 .carta.pareja-encontrada {
   background-color: #d4edda !important; /* verde suave */
   border: 2px solid #4caf50 !important; /* borde verde */
@@ -442,11 +429,8 @@ body {
   overflow: hidden;
   transition: all 0.4s ease-in-out;
   margin-right: 2%;
-<<<<<<< HEAD
   margin-bottom: 10%;
   top: 20px;
-=======
->>>>>>> 860e2d0e2b8da74ebe662abb52422f651766bc76
 }
 
 .boton-sorpresa::before {
@@ -625,7 +609,28 @@ body {
 .cerrar-boton:hover {
   background-color: #43a047;
 }
-<<<<<<< HEAD
+
+
+/* Botón volver arriba */
+.volver-arriba {
+  position: fixed;
+  bottom: 20px; 
+  left: 20px; 
+  background-color: #00c853;
+  color: white;
+  padding: 12px 14px;
+  width: 43px;         
+  height: 48px;
+  border-radius: 50%;
+  font-size: 18px;
+  display: none;
+  z-index: 999;
+  transition: all 0.3s ease-in-out;
+}
+.volver-arriba:hover {
+  background-color: #59be83;
+  transform: scale(1.1);
+}
 
 
 
@@ -813,11 +818,19 @@ body {
 ============================= */
 @media (max-width: 768px) {
   /* Juego de 4 columnas por 3 filas, tamaño reducido */
+
   .tablero-juego {
     grid-template-columns: repeat(4, 70px);
     gap: 10px;
     margin: 20px auto;
   }
+
+ .tablero-juego {
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 10px;
+  margin: 30px auto;
+  padding: 20px;
+}
 
   .carta {
     width: 70px;
@@ -825,6 +838,16 @@ body {
     font-size: 10px;
     padding: 5px;
   }
+
+
+.carta.volteada {
+  background-color: #ffffff;
+  border: 2px solid #8bc7a4;
+  text-align: center;
+  width: 70px !important;
+  height: 70px !important;
+}
+
 
   .titulo-juego {
     font-size: 18px;
@@ -977,5 +1000,3 @@ body {
   background-color: #59be83;
   transform: scale(1.1);
 }
-=======
->>>>>>> 860e2d0e2b8da74ebe662abb52422f651766bc76

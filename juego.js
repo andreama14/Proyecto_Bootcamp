@@ -74,6 +74,8 @@ cartas.forEach((carta, index) => {
   tablero.appendChild(div);
 });
 
+
+/* PATRICIA */
 function mostrarFAQ() {
   document.getElementById("faq").style.display = "block";
 }
