@@ -112,3 +112,18 @@ window.onscroll = function () {
   boton.style.display = window.scrollY > 300 ? 'block' : 'none';
 };
 
+
+  // Esperar a la primera interacción del usuario para reproducir
+  document.addEventListener("DOMContentLoaded", () => {
+    const audio = document.getElementById("musicaFondo");
+
+    const reproducir = () => {
+      audio.play().catch((e) => {
+        console.log("No se pudo reproducir automáticamente:", e);
+      });
+      document.removeEventListener("click", reproducir); // Evita múltiples llamadas
+    };
+
+    document.addEventListener("click", reproducir);
+  });
+

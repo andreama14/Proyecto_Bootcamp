@@ -456,6 +456,42 @@ body {
   left: 120%;
 }
 
+/* MENSAJE FELICITACIONES */
+/* Mensaje Final del Juego */
+.mensaje-final {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffffee;
+  border: 3px solid #00c853;
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  text-align: center;
+  animation: aparecer 1s ease forwards;
+  font-family: 'Dosis', sans-serif;
+}
+
+.mensaje-final h2 {
+  font-size: 24px;
+  color: #1b5e20;
+  margin: 0;
+  line-height: 1.5;
+}
+
+@keyframes aparecer {
+  0% {
+    transform: translate(-50%, -60%) scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
 
 
 
@@ -826,7 +862,7 @@ body {
   }
 
  .tablero-juego {
-  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
   gap: 10px;
   margin: 30px auto;
   padding: 20px;
